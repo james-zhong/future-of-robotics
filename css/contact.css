@@ -1,0 +1,58 @@
+/* CSS styling for the contact page */
+
+.contact-container {
+    /* Dimensions */
+    box-sizing: border-box;
+    min-height: 90vh;
+    width: 50vw;
+    margin: 0 auto;
+
+    /* Align all items to the centre horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Font styling */
+    text-align: center;
+}
+
+input, textarea {
+    /* Font */
+    font-family: "Roboto", system-ui;
+
+    /* Size and spacing */
+    width: 75%;
+    padding: 12px;
+    margin: 10px;
+
+    /* Remove border and resize */
+    border: none;
+    resize: none;
+}
+
+/* When user is focused/clicked on textbox */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px #FE8D01;
+}
+
+/* Submit button styling */
+button {
+    /* Positioning the button */
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+
+    /* Styling the button */
+    border: none;
+    cursor: pointer;
+
+    /* Transitioning bg colour when hovered */
+    transition: background-color ease 0.3s;
+}
+
+/* Change colour of background on hover */
+button:hover {
+    background: #FE8D01;
+}

@@ -1,0 +1,132 @@
+/* CSS for the elements of the index page */
+
+/* Setting the main background image for index */
+.landing-container{
+    /* Setting dimensions of the background */
+    width: 100vw;
+    height: 100vh;
+    background-color: #3D52A0;
+
+    /* Adjust background img dimensions and settings */
+    background-image: url("/images/main-robot.jpg");
+    background-size: 90vh;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.main-titles {
+    /* Setting up positioning of title and description */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 86.5vh;
+    /* Calculating where to position title for centre */
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+}
+
+.main-titles h1 {
+    font-size: 5rem;
+}
+
+.about {
+    /* Dimensions and spacing */
+    width: 100vw;
+    margin-bottom: 20px;
+
+    /* Changing background colour for contrast*/
+    background: #7091E6;
+    text-align: center;
+    text-wrap: balance;
+}
+
+/* Layout of the 3 about images in a flex layout */
+.img-container {
+    /* Setting dimensions for the image grid */
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95vw;
+    max-height: 70vh;
+
+    /* Flex container to align images */
+    display: flex;
+    flex-direction: row;
+
+    /* Centre content */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-div {
+    /* Make sure images take up as much space as possible using vw */
+    width: 33vw;
+    max-height: 70vh;
+    padding: 10px;
+    overflow: hidden;
+    /* Create a small amount of space between images */
+    margin: 10px 0 10px 0;
+    /* Animation for expanding the image */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+
+    /* Flex display to put text in centre of image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Setting up images */
+.img-container img {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    /* Ensuring all images cover its respective container */
+    object-fit: cover;
+}
+
+/* Styling the text for the images */
+.img-div-p {
+    width: 30%;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    /* Background for the text with transparency for easy visibility */
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.img-div:hover {
+    /* Make the container larger on hover */
+    margin: 0 auto;
+    width: 95vw;
+}
+
+/* Make text appear when image is hovered */
+.img-div:hover .img-div-p {
+    opacity: 1;
+    /* Animate the opacity after the container has increased to show text */
+    transition: opacity 1s ease-in-out 0.15s;
+}
+
+/* Determine if the window size is less than 800px */
+@media screen and (max-width: 800px) {
+    /* Adjust dimensions of title and centre */
+    .main-titles {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    /* Adjusting header title */
+    .main-titles h1 {
+        font-size: 3rem;
+    }
+    /* Adding a darker background to text for better contrast*/
+    .main-titles span {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}

@@ -1,0 +1,173 @@
+/* CSS for common elements of website (nav, footer, etc) */
+
+body {
+    margin: 0;
+    background-color: #7091E6;
+    color: #ffff;
+    /* Remove the horizontal scroll bar */
+    overflow-x: hidden;
+    /* Roboto font set as default */
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal
+}
+
+/* Container for the carousel */
+.milestones {
+    /* Aligning the carousel and buttons using flex */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the header a place for icon and navigation bar using grid layout*/
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-areas: "icon nav";
+    background-color: #3D52A0;
+}
+
+/* Positioning icon image to centre of its container */
+#header-icon {
+    grid-area: "icon";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Placing navigation and setting up flex for nav icons*/
+nav, .footer-nav-container {
+    grid-area: "nav";
+    display: flex;
+    flex-direction: row;
+
+    /* Making sure icons are evenly spaced out and aligned to the centre */
+    justify-content: space-evenly;  
+    align-items: center;
+    padding: 10px;
+    height: 10vh;
+}
+
+/* Aligning the icon and text to centre respectively using nested flex */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Setting images to the icons */
+.nav-img {
+    width: 20px;
+    height: 20px;
+    /* Transitioning hover animation */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+/* Nav icon image hover */
+.nav-img:hover {
+    /* Change the icon img colour to orange */
+    filter: invert(43%) sepia(95%) saturate(2000%);
+
+    /* Change cursor to hands to indicate that it can be clicked */
+    cursor: pointer;
+}
+
+/* Nav icon descriptions */
+nav p {
+    font-size: 0.75rem;
+    margin: 5px;
+}
+
+/* Standard header styles */
+h1, h2{
+    font-family: "Bebas Neue", system-ui;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin: 0;
+    text-align: center;
+    font-size: 5rem;
+}
+
+/* H2 styles */
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/*  Font style for descriptions under h1*/
+.header-desc {
+    text-align: center; 
+    font-size:1.75vw; 
+    padding: 10px;
+}
+
+/* Font/text styling for image attributes */
+.attribute, .attribute > * {
+    font-size: 0.6rem;
+    color: white;
+}
+
+.attribute a {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    width: 100vw;
+    background-color: #3D52A0;
+    /* Display items of the footer in even rows*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Setting the dimensions of the footer divs */
+.blurb, .browse, .contact {
+    width: 32vw;
+    padding: 20px;
+}
+
+/* Set up a flex display for the blurb to align text elements*/
+.blurb {
+    display: flex;
+    /* Align them to the centre */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust font sizes of footer text */
+.blurb p, .contact p {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Adjust image of footer icon */
+#footer-icon {
+    width: 15%;
+}
+
+/* Set up a flex display to align the icon and text in contact of the footer */
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+
+    /* Align elements to the centre */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Determine if the window size is less than 800px */
+@media screen and (max-width: 800px) {
+    /* Setting the footer nav and footer contact size */
+    .footer-nav-container, .footer-contact{
+        /* Changing directions of flexbox */
+        flex-direction: column;
+
+        /* Adjusting spacing for each flexbox element*/
+        row-gap: 20px;
+    }
+}

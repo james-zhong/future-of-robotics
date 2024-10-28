@@ -1,0 +1,178 @@
+.milestones {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    width: 90vw;
+
+    /* Using flex to align items to centre horizontally and vertically */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the different slides of the img carousel */
+.slides div {
+    /* Style image border */
+    border: 5px solid #3D52A0;
+    border-radius: 0.5rem;
+
+    /* Set dimensions and aspect ratio of image */
+    width: 60vw;
+    aspect-ratio: 16/9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+    /* Use flex to align header and text to centre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Hide irrelevant slides */
+    opacity: 0;
+    position: absolute;
+}
+
+/* Making the relevant image slide visible */
+.slides div[data-active] {
+    opacity: 1;
+    position: relative;
+}
+
+/* Date title text */
+.slides h1 {
+    font-size: 5rem;
+}
+
+/* Milestone description text */
+.slides p {
+    font-size: 1.15rem;
+    width: 70%;
+    text-align: center;
+}
+
+/* Customising buttons for the image carousel */
+.carousel-btn {
+    /* Styling button */
+    color: white;
+    background: none;
+    border: none;
+    
+    /* Positioning and sizing */
+    margin: 10px;
+    font-size: 3rem;
+    font-weight: bolder;
+
+    /* Transitioning the hover */
+    transition: color ease-out 0.5s;
+}
+
+/* On button hover */
+.carousel-btn:hover {
+    /* Changing cursor and colour of button */
+    cursor: pointer;
+    color: #FE8D01;
+}
+
+/* Positioning the buttons for image carousel */
+.button-container {
+    /* Using flex to centre the buttons to the middle */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* Positioning the buttons with margin */
+    margin-top: 10px;
+}
+
+/* Buttons for the image carousel */
+.nav-btn {
+    /* Styling and making buttons circular */
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50%;
+
+    /* Positioning buttons */
+    margin: 5px;
+
+    /* Transition for hover */
+    transition: background-color ease-out 0.25s;
+}
+
+/* On carousel button hover */
+.nav-btn:hover {
+    /* Changing appearance and cursor */
+    background-color: #FE8D01;
+    cursor: pointer;
+}
+
+/* Active button */
+.btn-active {
+    /* Set colour */
+    background-color: #FE8D01;
+}
+
+/* ------Setting slides to different background images------ */
+#slide-1 {
+    background-image: url("/images/history-img1.jpg");
+}
+
+#slide-2 {
+    background-image: url("/images/history-img2.jpg");
+}
+
+#slide-3 {
+        background-image: url("/images/history-img3.jpg");
+}
+
+#slide-4 {
+    background-image: url("/images/history-img4.jpg");
+}
+
+#slide-5 {
+    background-image: url("/images/history-img5.jpg");
+}
+/* --------------------------------------------------------- */
+
+/* Setting background colour for the timeline */
+.timeline {
+    background-color: #3D52A0;
+}
+
+/* Setting display of timeline sections for alignment */
+.timeline-date {
+    /* Using grid to align */
+    display: grid;
+    /* Setting elements to take up 50% of container */
+    grid-template-columns: 50% 50%;
+
+    /* Text and image alignment */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image for timeline settings */
+.timeline-date img {
+    /* Setting image dimensions */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Setting background colour for every other div for alternating background colour */
+.timeline-date:nth-child(even){
+    background-color: #7091E6;
+}
+
+/* Styling the text for the timeline descriptions */
+.timeline-desc {
+    padding: 3vw;
+}
+
+.timeline-desc h2 {
+    font-size: 4rem;
+}

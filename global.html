@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Importing custom fonts from google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Roboto and Bebas Neue Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400&display=swap"
+        rel="stylesheet">
+
+    <!--Importing the stylsheet for css-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Future of Robotics</title>
+</head>
+
+<body>
+    <!-- Icon and navigation of the website-->
+    <div class="menu">
+        <!--Grid layout for icon and navigation -->
+        <div id="header-icon">
+            <img src="images/robot-icon.png" width="50%" alt="Robot icon for the website">
+        </div>
+
+        <!--Navigation bar-->
+        <nav>
+            <div class="icon-container">
+                <a href="index.html"><img class="nav-img" src="images/home-icon.png"
+                        alt="Icon for the home webpage"></a>
+                <p>Home</p>
+            </div>
+
+            <div class="icon-container">
+                <a href="history.html"><img class="nav-img" src="images/history-icon.png"
+                        alt="Icon for history of robots page"></a>
+                <p>History</p>
+            </div>
+
+            <div class="icon-container">
+                <a href="applications.html"><img class="nav-img" src="images/applications.png"
+                        alt="Icon for applications of robots page"></a>
+                <p>Applications</p>
+            </div>
+
+            <div class="icon-container">
+                <a href="global.html"><img class="nav-img" src="images/global-icon.png"
+                        alt="Icon for robots around the world page"></a>
+                <p>Around The World</p>
+            </div>
+
+            <div class="icon-container">
+                <a href="contact.html"><img class="nav-img" src="images/contact-icon.png"
+                        alt="Icon for contact page"></a>
+                <p>Contact</p>
+            </div>
+        </nav>
+    </div>
+
+    <!--Main content-->
+    <div class="main">
+        <!--Header and description of the webpage-->
+        <h1>Around The World</h1>
+        <p class="header-desc">
+            Discover how the future of robotics will sculpt
+            myriads of locations all around the world. One
+            robot at a time. Click the points on the map to learn 
+            more about how the future of robotics will influence 
+            that country!
+        </p>
+        
+        <!--Creating the map with pinpoints-->
+        <div class="world-map">
+            <!--Map as an image-->
+            <img src="images/world-map.png" alt="Map of the world">
+
+            <!--Pinpoints for different countries-->
+            <div class="pin us" onclick="openModal('us')"></div>
+            <div class="pin aus" onclick="openModal('aus')"></div>
+            <div class="pin brz" onclick="openModal('brz')"></div>
+            <div class="pin ng" onclick="openModal('ng')"></div>
+            <div class="pin ukr" onclick="openModal('ukr')"></div>
+        </div>
+
+        <!--Modals for different countries-->
+        
+        <!--USA-->
+        <div id="us" class="modal">
+            <div class="modal-content">
+                <!--Close button-->
+                <span class="close" onclick="closeModal(event)">&times;</span>
+                <!--Text content-->
+                <h1>United States 🇺🇸</h1>
+                <div class="text">
+                    <img src="images/us-military-robot.jpg">
+                    <p>
+                        Robotics will reshape the U.S. economy, boosting productivity 
+                        across industries like healthcare, manufacturing, and security, 
+                        while creating new, advanced skill opportunities. Robots are 
+                        already advancing industries such as the military, etc,
+                        but the future development will further reinforce it, such as
+                        with the exploration of much more advanced places, discovering
+                        more and more findings that will positively benefit the human
+                        race.
+
+                        <!--Attribution-->
+                        <span class="attribute">Image from <a href="https://www.ghostrobotics.io/" target="_blank">Ghost Robotics.</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Australia-->
+        <div id="aus" class="modal">
+            <div class="modal-content">
+                <!--Close button-->
+                <span class="close" onclick="closeModal(event)">&times;</span>
+                <!--Text content-->
+                <h1>Australia 🇦🇺</h1>
+                <div class="text">
+                    <img src="images/kangaroo-robot.jpg">
+                    <p>
+                        Australia is a big farming industry and currently,
+                        the technology involved within robotics are aiding
+                        farmers all around Australia. In addition, Australia 
+                        also has a big mining industry. The future of robotics
+                        will aim to transform both of these industries for the
+                        better and will reach new milestones every day through
+                        technological advancements. For example, future robotic 
+                        systems will aim to have remote operation of machinery
+                        in the mining industry, potentially saving lives and 
+                        also will assist monitoring the health of livestock in
+                        the agriculture industry.
+
+                        <!--Attribution-->
+                        <span class="attribute">Image from <a href="https://www.festo.com" target="_blank">FESTO</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Brazil-->
+        <div id="brz" class="modal">
+            <div class="modal-content">
+                <!--Close button-->
+                <span class="close" onclick="closeModal(event)">&times;</span>
+                <!--Text content-->
+                <h1>Brazil 🇧🇷</h1>
+                <div class="text">
+                    <img src="images/tree-planting-robot.jpg">
+                    <p>
+                        The Amazon Rainforest is one of the world's most
+                        treasured destinations, providing life and well-being
+                        to a bunch of rare and useful wildlife. However, the
+                        Amazon Rainforest has since been shrinking due to
+                        deforestation. Current robotic technology is aiding 
+                        this on-going battle by powering a robot through solar
+                        panels and making it able to plant trees. In the future,
+                        technological advancements will allow the future of
+                        robotics to futher develop this idea, potentially planting
+                        an exponential amount of trees to battle climate change.
+
+                        <!--Attribution-->
+                        <span class="attribute">Image from <a href="https://new.abb.com" target="_blank">ABB Robotics</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Nigeria-->
+        <div id="ng" class="modal">
+            <div class="modal-content">
+                <!--Close button-->
+                <span class="close" onclick="closeModal(event)">&times;</span>
+                <!--Text content-->
+                <h1>Nigera 🇳🇬</h1>
+                <div class="text">
+                    <img src="images/nigeria-healthcare-robot.jpg">
+                    <p>
+                        Nigeria is a developing country and there are many needs
+                        that still need to be met regarding healthcare, financial
+                        stability such as jobs, and much more. With current and 
+                        future technologies arising, they will aim to make the 
+                        overall quality of life within Nigeria a better place.
+                        From healthcare to transport, robots will slowly 
+                        integrate within the society in Nigeria and provide
+                        stabilisation among their economy and transform them
+                        from a developing to developed country. In the image, 
+                        the robot is made by Nigerian students that is designed
+                        to care for COVID-19 patients.
+
+                        <!--Attribution-->
+                        <span class="attribute">Image from <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/nigerian-students-design-coronavirus-care-robot-2021-02-17/" target="_blank">Reuters.com</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Ukraine-->
+        <div id="ukr" class="modal">
+            <div class="modal-content">
+                <!--Close button-->
+                <span class="close" onclick="closeModal(event)">&times;</span>
+                <!--Text content-->
+                <h1>Ukraine 🇺🇦</h1>
+                <div class="text">
+                    <img src="images/ukraine-robot-dog.jpg">
+                    <p>
+                        Amidst the Ukraine-Russia war, unfortunately,
+                        many Ukranian soliders have been suffering due
+                        to the forces of Russia. However, robotics
+                        have helped Ukraine in aiding them with the 
+                        war such as providing weapons and healthcare.
+                        In the future, robots can further help
+                        Ukraine such as with the prevention of dangerous
+                        traps such as bombs left by the Russian army.
+                        This will eventually save many lives in the 
+                        future.
+
+                        <!--Attribution-->
+                        <span class="attribute">Image from <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/nigerian-students-design-coronavirus-care-robot-2021-02-17/" target="_blank">Reuters.com</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer of the website-->
+    <div class="footer">
+        <div class="blurb">
+            <!--Title and robot image-->
+            <h2>Future Of Robotics</h2>
+            <img id="footer-icon" src="images/robot-icon.png" alt="Robot icon of the website">
+
+            <!--Blurb description of website-->
+            <p>A future in which robotics enhances every aspect
+                of human life, from industry and healthcare to
+                personal convenience and beyond.</p>
+
+            <!--Copyright-->
+            <p>© 2024 Future Of Robotics. All Rights Reserved.</p>
+        </div>
+
+        <div class="browse">
+            <!--Title-->
+            <h2>Browse</h2>
+
+            <!--Navigation icons with alt tags-->
+            <div class="footer-nav-container">
+                <a href="index.html"><img class="nav-img" src="images/home-icon.png"
+                        alt="Icon for the home webpage"></a>
+                <a href="history.html"><img class="nav-img" src="images/history-icon.png"
+                        alt="Icon for history of robots page"></a>
+                <a href="applications.html"><img class="nav-img" src="images/applications.png"
+                        alt="Icon for applications of robots page"></a>
+                <a href="global.html"><img class="nav-img" src="images/global-icon.png"
+                        alt="Icon for robots around the world page"></a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <!--Title-->
+            <h2>Contact</h2>
+
+            <div class="footer-contact">
+                <!--Contact page navigation-->
+                <div class="icon-container">
+                    <a href="contact.html"><img class="nav-img" src="images/contact-icon.png"
+                            alt="Icon for contact page"></a>
+                    <p>Contact Page</p>
+                </div>
+
+                <!--Text for physical contact information-->
+                <p>+ 64 9 273 2310 <br><br>
+                    575 Chapel Road, <br>
+                    East Tamaki, <br>
+                    Auckland 2016
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var current_modal;
+    // Function to open respective modal
+    function openModal(country) {
+        current_modal = document.getElementById(country);
+        current_modal.style.display = "flex";
+        current_modal.style.justifyContent = "center";
+    }
+
+    // Closing modal on press
+    function closeModal() {
+        current_modal.style.display = 'none';
+    }
+</script>
+
+</html>

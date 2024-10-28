@@ -1,18 +1,30 @@
 /* CSS for the elements of the index page */
 
 /* Setting the main background image for index */
-.landing-container{
+.landing-container {
     /* Setting dimensions of the background */
     width: 100vw;
     height: 100vh;
     background-color: #3D52A0;
+}
 
-    /* Adjust background img dimensions and settings */
-    background-image: url("images/main-robot.jpg");
-    background-size: 90vh;
-    background-position: bottom right;
-    background-repeat: no-repeat;
+/* Make everything apart from hero image appear on top */
+.landing-container * {
+    z-index: 999;
+}
+
+/* Main robot image */
+.hero-img {
+    /* Sizing of the image */
+    max-width: auto;
+    height: 100%;
+    /* Positioning and aspect ratio of the image */
+    position: absolute;
     object-fit: cover;
+    /* Position the image to the bottom right */
+    bottom: 0;
+    right: 0;
+    z-index: 0;
 }
 
 .main-titles {

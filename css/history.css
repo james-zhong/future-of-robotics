@@ -115,27 +115,17 @@
     background-color: #FE8D01;
 }
 
-/* ------Setting slides to different background images------ */
-#slide-1 {
-    background-image: url("images/history-img1.jpg");
+/* Image carousel background image */
+.carousel-img {
+    /* Set as background image */
+    position: absolute;
+    /* Sizing */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Make sure the image is always at the bottom */
+    z-index: -99;
 }
-
-#slide-2 {
-    background-image: url("images/history-img2.jpg");
-}
-
-#slide-3 {
-        background-image: url("images/history-img3.jpg");
-}
-
-#slide-4 {
-    background-image: url("images/history-img4.jpg");
-}
-
-#slide-5 {
-    background-image: url("images/history-img5.jpg");
-}
-/* --------------------------------------------------------- */
 
 /* Setting background colour for the timeline */
 .timeline {

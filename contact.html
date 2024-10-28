@@ -75,7 +75,8 @@
             <div class="contact-form">
                 <h2>Got any questions, queries, or concerns? Send us a message!</h2>
 
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cb8d2d6c-21fe-4428-995c-749ddaba5476">
                     <!--Creating different input sections-->
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -89,7 +90,7 @@
                         <textarea type="text" name="message" placeholder="Your Message" required></textarea>
                     </div>
 
-                    <button type="submit" onclick="sendMail()">Submit</button>
+                    <button type="submit"">Submit</button>
                 </form>
             </div>
         </div>
@@ -146,17 +147,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    function sendMail(){
-        // Setting variables for the email
-        let parameters = {
-            name : document.getElementsByName("name").value,
-            email : document.getElementsByName("email").value,
-            message : document.getElementsByName("message").value,
-        }
-    }
-
-    // Sending the email to gmail with template and parameters
-    emailjs.send("service_scsp087", "template_lgmcluf", parameters).then(aler("Your enquiry has been submitted."))
-</script>
